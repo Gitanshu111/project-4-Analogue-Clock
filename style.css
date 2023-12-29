@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:gray
+
+}
+.con{
+    position: relative;
+
+}
+.clock{
+
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px, 30px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.clock span{
+    position: absolute;
+    width: 30px; 
+    height: 30px; 
+    left: 50%;
+    top: 50%;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -50%) rotate(calc(30deg * var(--i))) translate(0, -130px) rotate(calc(-30deg * var(--i)));
+    text-align: center;
+}
+.clock span b{
+    position: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+.clock::before{
+    content:'';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 2;
+
+}
+.hend{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hend i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 10px;
+}
+.control-panel {
+    position: fixed; 
+    top: 10px;       
+    right: 10px; 
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 10px;   
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.control-panel div {
+    margin-bottom: 10px; 
+}
